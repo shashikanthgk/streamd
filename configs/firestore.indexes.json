@@ -1,0 +1,13 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "calls",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "senderID", "order": "ASCENDING" },
+        { "fieldPath": "status", "order": "ASCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

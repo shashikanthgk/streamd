@@ -1,0 +1,23 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // MVP: open access for signaling only. Replace with auth-based rules before production.
+    match /peers/{peerId} {
+      allow read, write: if true;
+    }
+
+    match /calls/{callId} {
+      allow read, write: if true;
+
+      match /senderCandidates/{candidateId} {
+        allow read, write: if true;
+      }
+
+      match /receiverCandidates/{candidateId} {
+        allow read, write: if true;
+      }
+    }
+  }
+}

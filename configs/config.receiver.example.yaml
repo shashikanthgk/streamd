@@ -1,0 +1,16 @@
+peer_id: living-room-pc
+
+firebase:
+  project_id: streamd-p2p-signaling
+  credentials_file: ~/.streamd/service-account.json
+
+audio:
+  sample_rate: 48000
+  channels: 1
+  frame_ms: 20
+
+webrtc:
+  stun_servers:
+    - stun:stun.l.google.com:19302
+
+log_level: info
